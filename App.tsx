@@ -1,72 +1,46 @@
-import React from "react";
-import { 
-  View, 
-  Text, 
-  Image, 
-  TextInput, 
-  ScrollView, 
-  StyleSheet,
+import React, { useState } from 'react';
+import {
+  ScrollView,
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
 } from 'react-native';
-import power from './assets/power.png';
+import Title from './src/components/Title';
+import styles from './src/components/Style';
 
-const App = () => {
+const SignInScreen = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSignIn = () => {
+  };
+
   return (
-    <ScrollView style={styles.scrollView}>
-      <Text style={styles.title}>Basic Component in React Native</Text>
-      <Text style={styles.title}>Wellcome!</Text>
-      <TextInput placeholder="enter your name ...." style={styles.inputNama} />
-      <View style={styles.container}>
-        <View style={{width: 100, height: 100, backgroundColor: 'black'}}/>
-        <View style={{width: 100, height: 100, backgroundColor: 'purple'}}/>
-        <View style={{width: 100, height: 100, backgroundColor: 'navy'}}/>        
+    <ScrollView style={styles.container}>
+      <View style={styles.formContainer}>
+        <Title />
+        <Text style={styles.label}>Username</Text>
+        <TextInput
+          style={styles.input}
+          value={username}
+          onChangeText={setUsername}
+          placeholder='Masukan username anda'
+        />
+        <Text style={styles.label}>Password</Text>
+        <TextInput
+          style={styles.input}
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry
+          placeholder='Masukan password anda'
+        />
+        <TouchableOpacity style={styles.button} onPress={handleSignIn}>
+          <Text style={styles.buttonText}>Sign In</Text>
+        </TouchableOpacity>
       </View>
-      <Image
-        source={require('./assets/react.jpeg')} 
-        style={styles.image}
-      />
-      <Image source={power} style={styles.image} />
-      <Image
-        source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
-        style={styles.image}
-      />
-    </ScrollView> 
+    </ScrollView>
   );
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: 'black',
-    textAlign: 'center',
-    marginTop: 5,
-  },
-  container: {
-    flexDirection: 'row',
-    marginTop: 10, 
-    alignSelf: 'center',
-  },
-  inputNama: {
-    marginTop: 20,
-    fontSize: 19,
-    fontWeight: 'bold',
-    borderColor: 'black',
-    borderWidth: 1,
-    margin: 10,
-    borderRadius: 10,
-    padding: 10,
-  },
-  image: {
-    height: 200, 
-    width: 250, 
-    marginTop: 20, 
-    alignSelf: 'center',
-
-  },
-});
-
-export default App;
+export default SignInScreen;
