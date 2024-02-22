@@ -14,23 +14,7 @@ export default function App() {
       <Stack.Screen name="UserList" component={UserList} />
     </Stack.Navigator>
   </NavigationContainer>
-  // <View><Text>TEst</Text></View>
-    // <ScrollView style={styles.scrollView}>
-    //   <View style={styles.container}>
-    //     <View style={styles.utama}>
-    //       <Text style={styles.title}>Users List</Text>
-    //       {userData.map(user => (
-    //         <View key={user.id} style={styles.userContainer}>
-    //           <Text style={styles.boldText}>Name: <Text style={styles.normalText}>{user.name}</Text></Text>
-    //           <Text style={styles.boldText}>Username: <Text style={styles.normalText}>{user.username}</Text></Text>
-    //           <Text style={styles.boldText}>Email: <Text style={styles.normalText}>{user.email}</Text></Text>
-    //           <Text style={styles.boldText}>Address: <Text style={styles.normalText}>{user.address.street}, {user.address.suite}, {user.address.city}, {user.address.zipcode}</Text></Text>
-    //           <Text style={styles.boldText}>Phone: <Text style={styles.normalText}>{user.phone}</Text></Text>
-    //         </View>
-    //       ))}
-    //     </View>
-    //   </View>
-    // </ScrollView>
+
   );
 }
 
