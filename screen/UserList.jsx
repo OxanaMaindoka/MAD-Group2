@@ -30,3 +30,36 @@ export default function UserList() {
     </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  scrollView: {
+    flex: 1,
+  },
+  container: {
+    flex: 1,
+    padding: 10,
+    borderColor: 'black',
+    borderWidth: 1,
+  },
+  utama: {
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 34,
+    fontWeight: '900',
+    marginBottom: 10,
+    color: 'black'
+  },
+  userContainer: {
+    marginBottom: 10,
+    padding: 10,
+    borderColor: 'lightgrey',
+    borderWidth: 1,
+  },
+  boldText: {
+    fontWeight: 'bold',
+  },
+  normalText: {
+    fontWeight: 'normal',
+  },
+});
